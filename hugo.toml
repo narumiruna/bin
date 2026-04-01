@@ -6,3 +6,8 @@ enableRobotsTXT = true
 
 [params]
 description = "筆記與字幕整理網站"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
