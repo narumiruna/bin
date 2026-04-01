@@ -4,13 +4,11 @@ date: 2026-04-01T22:49:00+08:00
 draft: false
 ---
 
-# 從 RPI 到情境工程：兩場 AI Coding Agent 演講的實戰方法論
-
 ## 前言
 本文根據以下兩份影片字幕整理而成，目標是將分散的演講內容整合為一套可實作、可協作、可持續優化的工程方法。
 
-- 影片一：`YwZR6tc7qYg`
-- 影片二：`rmvDxxNubIg`
+- 影片一：[No Vibes Allowed: Solving Hard Problems in Complex Codebases – Dex Horthy, HumanLayer](https://www.youtube.com/watch?v=rmvDxxNubIg)
+- 影片二：[Everything We Got Wrong About Research-Plan-Implement - Dexter Horthy](https://youtu.be/YwZR6tc7qYg)
 
 兩場演講的共同主軸是：AI coding agent 已經能大幅提升產碼速度，但若缺少流程治理，最終會把速度優勢轉成品質與維運負債。
 
