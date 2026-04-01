@@ -95,6 +95,7 @@ body {
   max-width: 680px;
   margin: 1rem auto;
   padding: 1rem;
+  cursor: zoom-in;
 }
 
 .content pre.mermaid svg {
@@ -102,4 +103,40 @@ body {
   width: 100% !important;
   height: auto !important;
   margin: 0 auto;
+}
+
+.mermaid-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  padding: 4rem 1rem 1rem;
+  background: rgba(15, 23, 42, 0.72);
+}
+
+.mermaid-modal-content {
+  width: min(1100px, 94vw);
+  max-height: calc(100vh - 6rem);
+  margin: 0 auto;
+  overflow: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.mermaid-modal-content svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mermaid-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  background: #111827;
+  color: #f9fafb;
+  cursor: pointer;
 }

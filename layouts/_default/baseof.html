@@ -14,9 +14,46 @@
     <main class="container">
       {{ block "main" . }}{{ end }}
     </main>
+    <div id="mermaid-modal" class="mermaid-modal" hidden>
+      <button id="mermaid-modal-close" class="mermaid-modal-close" type="button" aria-label="Close diagram">Close</button>
+      <div id="mermaid-modal-content" class="mermaid-modal-content" aria-live="polite"></div>
+    </div>
     <script type="module">
       import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
       mermaid.initialize({ startOnLoad: true, theme: "default" });
+
+      const modal = document.getElementById("mermaid-modal");
+      const modalContent = document.getElementById("mermaid-modal-content");
+      const closeButton = document.getElementById("mermaid-modal-close");
+
+      function closeModal() {
+        modal.hidden = true;
+        modalContent.replaceChildren();
+        document.body.style.overflow = "";
+      }
+
+      function openModal(svg) {
+        const clone = svg.cloneNode(true);
+        modalContent.replaceChildren(clone);
+        modal.hidden = false;
+        document.body.style.overflow = "hidden";
+      }
+
+      document.addEventListener("click", (event) => {
+        const diagramBlock = event.target.closest("pre.mermaid");
+        if (!diagramBlock) return;
+        const svg = diagramBlock.querySelector("svg");
+        if (!svg) return;
+        openModal(svg);
+      });
+
+      closeButton.addEventListener("click", closeModal);
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeModal();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal.hidden) closeModal();
+      });
     </script>
   </body>
 </html>
