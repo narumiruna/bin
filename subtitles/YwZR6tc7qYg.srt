@@ -1,0 +1,3351 @@
+1
+00:00:04,720 --> 00:00:07,120
+All right. Before I bring up Dex, I
+
+2
+00:00:07,120 --> 00:00:11,120
+gotta say I met James. And James Yeah.
+
+3
+00:00:11,120 --> 00:00:13,599
+Can you stand up real fast? James told
+
+4
+00:00:13,599 --> 00:00:15,759
+me this morning that he is going We
+
+5
+00:00:15,759 --> 00:00:17,440
+can't see the QR code. You got to hit it
+
+6
+00:00:17,440 --> 00:00:19,359
+up. He's going to be having dinner
+
+7
+00:00:19,359 --> 00:00:22,720
+tonight and everybody's invited. So, if
+
+8
+00:00:22,720 --> 00:00:25,840
+you want to go, just scan that QR code
+
+9
+00:00:25,840 --> 00:00:28,800
+real fast and go hang out with James.
+
+10
+00:00:28,800 --> 00:00:30,560
+That's awesome. And that's what we're
+
+11
+00:00:30,560 --> 00:00:33,040
+going for here. That is great.
+
+12
+00:00:33,040 --> 00:00:35,120
+>> Yeah, you rock. Yeah, that's I like it.
+
+13
+00:00:35,120 --> 00:00:37,600
+I like it, too. Okay, so I'm gonna bring
+
+14
+00:00:37,600 --> 00:00:40,160
+up Dex. Uh earlier somebody said we need
+
+15
+00:00:40,160 --> 00:00:42,079
+to have a mustache competition. I don't
+
+16
+00:00:42,079 --> 00:00:44,559
+think that's going to happen, but I will
+
+17
+00:00:44,559 --> 00:00:47,760
+say that he gave us 200 slides that he's
+
+18
+00:00:47,760 --> 00:00:48,800
+about to present.
+
+19
+00:00:48,800 --> 00:00:51,360
+>> Whoa, whoa. 158.
+
+20
+00:00:51,360 --> 00:00:53,520
+>> 158. We're going to keep him honest on
+
+21
+00:00:53,520 --> 00:00:56,000
+the timing. All right, so let it start
+
+22
+00:00:56,000 --> 00:00:57,440
+nowing everybody.
+
+23
+00:00:57,440 --> 00:00:58,879
+>> Let's do it. What's up everybody?
+
+24
+00:00:58,879 --> 00:01:00,079
+>> Dex.
+
+25
+00:01:00,079 --> 00:01:02,160
+>> Yeah.
+
+26
+00:01:02,160 --> 00:01:05,439
+>> Uh I am Dex. Uh this is a talk with a
+
+27
+00:01:05,439 --> 00:01:06,720
+very long title that I'm not going to
+
+28
+00:01:06,720 --> 00:01:08,880
+read because we're on the clock now. Uh
+
+29
+00:01:08,880 --> 00:01:10,479
+I have been talking about coding agents
+
+30
+00:01:10,479 --> 00:01:12,240
+for quite a while. Basically since like
+
+31
+00:01:12,240 --> 00:01:14,159
+August um we did a long talk in
+
+32
+00:01:14,159 --> 00:01:16,080
+November. Um there's this methodology
+
+33
+00:01:16,080 --> 00:01:17,520
+that we've been talking about a lot uh
+
+34
+00:01:17,520 --> 00:01:20,479
+called research plan implement. Um a lot
+
+35
+00:01:20,479 --> 00:01:22,159
+of up votes on hackernews. There's
+
+36
+00:01:22,159 --> 00:01:23,920
+probably 10,000 people who have gone to
+
+37
+00:01:23,920 --> 00:01:25,439
+our open source and grabbed our prompts
+
+38
+00:01:25,439 --> 00:01:27,040
+and are using them internally from small
+
+39
+00:01:27,040 --> 00:01:29,360
+startups up to the enterprise. Um it all
+
+40
+00:01:29,360 --> 00:01:31,759
+started with this guy. Um this guy has
+
+41
+00:01:31,759 --> 00:01:33,439
+anyone seen this talk?
+
+42
+00:01:33,439 --> 00:01:35,600
+>> Yes. Okay. So Eigor went in and he said
+
+43
+00:01:35,600 --> 00:01:36,880
+like okay cool we're using a lot of
+
+44
+00:01:36,880 --> 00:01:38,079
+tokens we're spending a lot of money to
+
+45
+00:01:38,079 --> 00:01:39,920
+get AI developer productivity. But what
+
+46
+00:01:39,920 --> 00:01:41,520
+he found was that it actually tends to
+
+47
+00:01:41,520 --> 00:01:43,119
+lead to a lot of rework. Like you are
+
+48
+00:01:43,119 --> 00:01:45,920
+shipping 50% more but half of that is
+
+49
+00:01:45,920 --> 00:01:47,360
+just cleaning up the slop from last
+
+50
+00:01:47,360 --> 00:01:48,799
+week. And the other thing they found,
+
+51
+00:01:48,799 --> 00:01:50,320
+and these are last year's numbers, so
+
+52
+00:01:50,320 --> 00:01:52,479
+this does not account for opus 4.5. So I
+
+53
+00:01:52,479 --> 00:01:53,920
+would I would inflate this a little bit,
+
+54
+00:01:53,920 --> 00:01:56,560
+but like it's great for low complexity
+
+55
+00:01:56,560 --> 00:02:00,079
+green field tasks, not great for
+
+56
+00:02:00,079 --> 00:02:02,799
+high complexity brownfield tasks. Um,
+
+57
+00:02:02,799 --> 00:02:04,880
+and so I could give you a talk about RPI
+
+58
+00:02:04,880 --> 00:02:06,960
+and why it's great. Uh, but that would
+
+59
+00:02:06,960 --> 00:02:08,560
+be boring. And there's other talks, so
+
+60
+00:02:08,560 --> 00:02:09,759
+if you haven't seen them, go watch them.
+
+61
+00:02:09,759 --> 00:02:12,560
+It'll give more context. But, uh, I'm
+
+62
+00:02:12,560 --> 00:02:13,520
+going to tell you everything we got
+
+63
+00:02:13,520 --> 00:02:15,760
+wrong about RPI today. Um, we thought we
+
+64
+00:02:15,760 --> 00:02:18,239
+had this AI thing thing figured out. I,
+
+65
+00:02:18,239 --> 00:02:20,239
+uh, am am, uh, humble enough to admit
+
+66
+00:02:20,239 --> 00:02:22,319
+when I was wrong. Uh, so we got a couple
+
+67
+00:02:22,319 --> 00:02:24,160
+things wrong. Uh, one thing that's very
+
+68
+00:02:24,160 --> 00:02:25,360
+relevant if you've been on Twitter today
+
+69
+00:02:25,360 --> 00:02:27,520
+is, uh, I don't think it's okay to not
+
+70
+00:02:27,520 --> 00:02:30,319
+read the code. Uh, I also don't think
+
+71
+00:02:30,319 --> 00:02:32,239
+you should read really long plan files.
+
+72
+00:02:32,239 --> 00:02:35,040
+Uh, those two are related. Uh, and no,
+
+73
+00:02:35,040 --> 00:02:36,879
+Cloud should not be allowed to if you if
+
+74
+00:02:36,879 --> 00:02:38,640
+you writing production code that is used
+
+75
+00:02:38,640 --> 00:02:40,080
+by users and you're going to get patient
+
+76
+00:02:40,080 --> 00:02:43,440
+3 a.m. if it's broken. Uh, no slop. This
+
+77
+00:02:43,440 --> 00:02:46,000
+is the year 2026. No more slop. So,
+
+78
+00:02:46,000 --> 00:02:47,120
+we're all on this journey. We're all
+
+79
+00:02:47,120 --> 00:02:48,640
+figuring this out. We all are wrong all
+
+80
+00:02:48,640 --> 00:02:50,480
+the time. We did get get a couple things
+
+81
+00:02:50,480 --> 00:02:53,120
+right. Uh there is no magic prompt. Uh
+
+82
+00:02:53,120 --> 00:02:55,040
+do not outsource the thinking. You the
+
+83
+00:02:55,040 --> 00:02:56,720
+engineer are an important part of this
+
+84
+00:02:56,720 --> 00:02:59,120
+process and seek leverage. There's a lot
+
+85
+00:02:59,120 --> 00:03:00,879
+of code being written. Find ways to make
+
+86
+00:03:00,879 --> 00:03:02,319
+sure it's correct without having to read
+
+87
+00:03:02,319 --> 00:03:05,680
+all of it and resteer after the fact. Um
+
+88
+00:03:05,680 --> 00:03:06,879
+so, lots of people I'm sure have heard
+
+89
+00:03:06,879 --> 00:03:08,319
+of research plan implement. Has anyone
+
+90
+00:03:08,319 --> 00:03:10,080
+actually run this claude command?
+
+91
+00:03:10,080 --> 00:03:12,480
+Research codebase? Okay, cool. Leave
+
+92
+00:03:12,480 --> 00:03:14,720
+your hand up if you've run it like this.
+
+93
+00:03:14,720 --> 00:03:16,720
+Tell me how this system works. Has
+
+94
+00:03:16,720 --> 00:03:18,400
+anyone run it like this of like, "Hey, I
+
+95
+00:03:18,400 --> 00:03:19,360
+want to build this thing. Go do the
+
+96
+00:03:19,360 --> 00:03:20,959
+research."
+
+97
+00:03:20,959 --> 00:03:23,200
+Okay. Um or maybe go fetch a ticket or
+
+98
+00:03:23,200 --> 00:03:25,519
+something. What about the create plan uh
+
+99
+00:03:25,519 --> 00:03:28,480
+prompt? Okay. Couple hands. Uh how many
+
+100
+00:03:28,480 --> 00:03:29,920
+of you run it like that? Hey, we got to
+
+101
+00:03:29,920 --> 00:03:32,720
+go build this thing. Yes. Has anyone run
+
+102
+00:03:32,720 --> 00:03:34,720
+it like this? Work back and forth with
+
+103
+00:03:34,720 --> 00:03:36,080
+me starting with your open questions and
+
+104
+00:03:36,080 --> 00:03:38,480
+outline before writing the plan. Okay.
+
+105
+00:03:38,480 --> 00:03:40,239
+Some of you found out about the magic
+
+106
+00:03:40,239 --> 00:03:42,080
+words. A lot of people didn't though. Uh
+
+107
+00:03:42,080 --> 00:03:44,000
+we'll get into why that's a problem. Um
+
+108
+00:03:44,000 --> 00:03:45,840
+so since October we've basically worked
+
+109
+00:03:45,840 --> 00:03:47,519
+with thousands of engineers from tiny
+
+110
+00:03:47,519 --> 00:03:49,840
+startups all the way up to Fortune 500s.
+
+111
+00:03:49,840 --> 00:03:51,599
+Um and we would find over and over again
+
+112
+00:03:51,599 --> 00:03:53,440
+we would give these tools to an expert
+
+113
+00:03:53,440 --> 00:03:54,480
+uh and they would get great results.
+
+114
+00:03:54,480 --> 00:03:55,760
+They would go sit and talk to Cloud for
+
+115
+00:03:55,760 --> 00:03:56,959
+70 hours a week and they would start
+
+116
+00:03:56,959 --> 00:03:58,640
+shipping like crazy. Uh and then they
+
+117
+00:03:58,640 --> 00:04:00,560
+would go give it to their team and the
+
+118
+00:04:00,560 --> 00:04:03,280
+results were not always so good. Um and
+
+119
+00:04:03,280 --> 00:04:04,799
+so people weren't getting good results.
+
+120
+00:04:04,799 --> 00:04:06,239
+And so we got in the trenches with our
+
+121
+00:04:06,239 --> 00:04:08,080
+users and we went to go figure out what
+
+122
+00:04:08,080 --> 00:04:09,519
+was going wrong. And the first thing
+
+123
+00:04:09,519 --> 00:04:10,799
+that was going wrong was people were not
+
+124
+00:04:10,799 --> 00:04:13,360
+getting good research. Um, so we talked
+
+125
+00:04:13,360 --> 00:04:15,439
+about this in November. This is uh one
+
+126
+00:04:15,439 --> 00:04:17,040
+of the only slides I'm reusing, but you
+
+127
+00:04:17,040 --> 00:04:18,320
+would pick a zone of your codebase. You
+
+128
+00:04:18,320 --> 00:04:19,120
+would say, "We're going to build
+
+129
+00:04:19,120 --> 00:04:20,560
+something over here." And then you would
+
+130
+00:04:20,560 --> 00:04:22,160
+launch it a coding agent session to go
+
+131
+00:04:22,160 --> 00:04:23,680
+send these sub agents through these deep
+
+132
+00:04:23,680 --> 00:04:25,919
+vertical slices through the codebase for
+
+133
+00:04:25,919 --> 00:04:27,919
+just the context, compressed context
+
+134
+00:04:27,919 --> 00:04:29,520
+about what is the thing we're about to
+
+135
+00:04:29,520 --> 00:04:32,400
+go build, right? And we said keep things
+
+136
+00:04:32,400 --> 00:04:35,280
+objective, discourage opinions, don't
+
+137
+00:04:35,280 --> 00:04:36,960
+actually put any implementation details
+
+138
+00:04:36,960 --> 00:04:39,040
+in there. You just want to compress the
+
+139
+00:04:39,040 --> 00:04:40,880
+truth. What is true about how the code
+
+140
+00:04:40,880 --> 00:04:43,440
+works today? And a skilled engineer was
+
+141
+00:04:43,440 --> 00:04:44,800
+really good at taking, okay, here's my
+
+142
+00:04:44,800 --> 00:04:47,040
+ticket. Let me write some questions that
+
+143
+00:04:47,040 --> 00:04:48,720
+will cause the model to go touch all the
+
+144
+00:04:48,720 --> 00:04:50,639
+parts of the codebase that matter. So if
+
+145
+00:04:50,639 --> 00:04:52,000
+it was, you know, add a new endpoint to
+
+146
+00:04:52,000 --> 00:04:54,160
+reticulate splines across tenants. We
+
+147
+00:04:54,160 --> 00:04:55,440
+would say something like, okay, tell me
+
+148
+00:04:55,440 --> 00:04:57,280
+how endpoint endpoints work and trace
+
+149
+00:04:57,280 --> 00:04:58,479
+the logic flow for everything that
+
+150
+00:04:58,479 --> 00:05:00,639
+touches splines and go find the workers
+
+151
+00:05:00,639 --> 00:05:03,199
+that do all the reticulation. Uh, so if
+
+152
+00:05:03,199 --> 00:05:04,960
+this is your ticket, a lot of people
+
+153
+00:05:04,960 --> 00:05:06,400
+would run it like this. they would just
+
+154
+00:05:06,400 --> 00:05:07,680
+say, "Hey, research codebase. Here's
+
+155
+00:05:07,680 --> 00:05:09,680
+what I'm building." Um, and the problem
+
+156
+00:05:09,680 --> 00:05:11,440
+is that good research is all facts. But
+
+157
+00:05:11,440 --> 00:05:12,400
+if you tell the model what you're
+
+158
+00:05:12,400 --> 00:05:13,840
+building, then you get opinions. And we
+
+159
+00:05:13,840 --> 00:05:15,280
+don't, we'll get into why the model
+
+160
+00:05:15,280 --> 00:05:16,720
+shouldn't have opinions later. Comes
+
+161
+00:05:16,720 --> 00:05:17,919
+back to this thing that Jake from
+
+162
+00:05:17,919 --> 00:05:19,840
+Netflix came up with, which is do not
+
+163
+00:05:19,840 --> 00:05:22,000
+outsource the thinking. Um, the other
+
+164
+00:05:22,000 --> 00:05:23,680
+thing that wasn't working is people were
+
+165
+00:05:23,680 --> 00:05:26,320
+getting not great plans. Um, and
+
+166
+00:05:26,320 --> 00:05:27,840
+basically there were these steps built
+
+167
+00:05:27,840 --> 00:05:30,479
+into this planning prompt uh that was
+
+168
+00:05:30,479 --> 00:05:32,639
+this single giant like monolithic thing
+
+169
+00:05:32,639 --> 00:05:35,600
+with 85 or more instructions. And it had
+
+170
+00:05:35,600 --> 00:05:37,360
+these steps in it of like cool present
+
+171
+00:05:37,360 --> 00:05:39,440
+design options to the user uh get
+
+172
+00:05:39,440 --> 00:05:41,600
+feedback on the structure uh before you
+
+173
+00:05:41,600 --> 00:05:43,280
+actually go write the plan. And so a
+
+174
+00:05:43,280 --> 00:05:44,960
+good planning session would look
+
+175
+00:05:44,960 --> 00:05:46,479
+something like you know you have your
+
+176
+00:05:46,479 --> 00:05:48,720
+claude system tools and your prompt and
+
+177
+00:05:48,720 --> 00:05:51,280
+then you say hey create plan loads the
+
+178
+00:05:51,280 --> 00:05:52,639
+skill looks at your ticket loads your
+
+179
+00:05:52,639 --> 00:05:54,400
+research doc launches a bunch of sub
+
+180
+00:05:54,400 --> 00:05:55,919
+aents to go find a bunch of things that
+
+181
+00:05:55,919 --> 00:05:57,199
+are true about the codebase just
+
+182
+00:05:57,199 --> 00:05:58,639
+confirms some stuff that wasn't maybe in
+
+183
+00:05:58,639 --> 00:05:59,840
+the research. This is all one big
+
+184
+00:05:59,840 --> 00:06:01,440
+context window by the way. Usually I'll
+
+185
+00:06:01,440 --> 00:06:03,199
+use these columns to mean separate
+
+186
+00:06:03,199 --> 00:06:04,720
+context windows, but today this is all
+
+187
+00:06:04,720 --> 00:06:06,960
+one session. I just slides are sideways,
+
+188
+00:06:06,960 --> 00:06:08,960
+so I had to put them on next to each
+
+189
+00:06:08,960 --> 00:06:11,039
+other. Um, but the agent would come and
+
+190
+00:06:11,039 --> 00:06:12,479
+ask questions. So, okay, here's our
+
+191
+00:06:12,479 --> 00:06:14,000
+options for question one. User would
+
+192
+00:06:14,000 --> 00:06:15,280
+pick an option. User would pick an
+
+193
+00:06:15,280 --> 00:06:16,639
+option. And then eventually it would
+
+194
+00:06:16,639 --> 00:06:17,680
+say, cool, here's the order we're going
+
+195
+00:06:17,680 --> 00:06:19,440
+to do the things. Um, what do you think?
+
+196
+00:06:19,440 --> 00:06:20,720
+And the user could say, well, we need to
+
+197
+00:06:20,720 --> 00:06:22,160
+add a testing step up front, and I want
+
+198
+00:06:22,160 --> 00:06:24,240
+to swap phases three and four. Assistant
+
+199
+00:06:24,240 --> 00:06:25,680
+would give the new outline of the
+
+200
+00:06:25,680 --> 00:06:27,759
+phases. then the user would approve it
+
+201
+00:06:27,759 --> 00:06:30,080
+and only then would we write our plan
+
+202
+00:06:30,080 --> 00:06:33,759
+file. Um complex process of aligning
+
+203
+00:06:33,759 --> 00:06:35,680
+with the user on what was what was going
+
+204
+00:06:35,680 --> 00:06:38,319
+to be built. Um but for about 50% of
+
+205
+00:06:38,319 --> 00:06:40,479
+people maybe more if you didn't prompt
+
+206
+00:06:40,479 --> 00:06:42,080
+it with this work back and forth with me
+
+207
+00:06:42,080 --> 00:06:44,319
+or Opus was just feeling dumb for that
+
+208
+00:06:44,319 --> 00:06:47,759
+that particular hour of the day. Um it
+
+209
+00:06:47,759 --> 00:06:49,280
+would just take the stuff and it would
+
+210
+00:06:49,280 --> 00:06:51,199
+just immediately go and write the plan
+
+211
+00:06:51,199 --> 00:06:52,800
+out. And so you would get this and it
+
+212
+00:06:52,800 --> 00:06:54,080
+would be like cool. I wrote the plan,
+
+213
+00:06:54,080 --> 00:06:55,759
+didn't ask me any questions, made all
+
+214
+00:06:55,759 --> 00:06:58,319
+the decisions for me. Yikes. So we gave
+
+215
+00:06:58,319 --> 00:07:00,479
+the tools to people and some people got
+
+216
+00:07:00,479 --> 00:07:02,000
+good results and some people didn't. And
+
+217
+00:07:02,000 --> 00:07:03,440
+we dug in and we were like, "What's the
+
+218
+00:07:03,440 --> 00:07:05,680
+difference?" Uh, and people would
+
+219
+00:07:05,680 --> 00:07:07,039
+literally say this to me like, "Well,
+
+220
+00:07:07,039 --> 00:07:08,720
+you have to say the magic words." And I
+
+221
+00:07:08,720 --> 00:07:10,160
+found myself in workshops full of
+
+222
+00:07:10,160 --> 00:07:11,599
+enterprise engineers saying, "Well,
+
+223
+00:07:11,599 --> 00:07:13,039
+guys, guys, guys, yeah, here's the
+
+224
+00:07:13,039 --> 00:07:14,319
+software, but don't forget to say the
+
+225
+00:07:14,319 --> 00:07:16,319
+magic words." It was, quite frankly, it
+
+226
+00:07:16,319 --> 00:07:18,560
+was embarrassing. But if you said this,
+
+227
+00:07:18,560 --> 00:07:19,599
+work back and forth with me starting
+
+228
+00:07:19,599 --> 00:07:20,720
+with your open questions and outline
+
+229
+00:07:20,720 --> 00:07:22,400
+before writing the plan. Then the agent
+
+230
+00:07:22,400 --> 00:07:24,000
+would ask you the questions. And this
+
+231
+00:07:24,000 --> 00:07:26,560
+isn't the user's fault. If you built a
+
+232
+00:07:26,560 --> 00:07:28,319
+tool that requires hours and hours of
+
+233
+00:07:28,319 --> 00:07:30,400
+training and reps to get like good
+
+234
+00:07:30,400 --> 00:07:33,039
+results from, go fix the tool. And so
+
+235
+00:07:33,039 --> 00:07:35,039
+I'll talk about how we did that. Um, but
+
+236
+00:07:35,039 --> 00:07:36,400
+why these steps were getting skipped,
+
+237
+00:07:36,400 --> 00:07:37,680
+the one of the big takeaways I'll give
+
+238
+00:07:37,680 --> 00:07:38,960
+you today is like you have an
+
+239
+00:07:38,960 --> 00:07:42,000
+instruction budget. Uh, my co-founder
+
+240
+00:07:42,000 --> 00:07:43,599
+Kyle is somewhere over here. he wrote
+
+241
+00:07:43,599 --> 00:07:45,039
+this really good blog post in December
+
+242
+00:07:45,039 --> 00:07:47,440
+or November I guess technically um that
+
+243
+00:07:47,440 --> 00:07:49,039
+basically cited this archive paper which
+
+244
+00:07:49,039 --> 00:07:50,960
+again this is from last year so the
+
+245
+00:07:50,960 --> 00:07:52,240
+number is probably a little bit higher
+
+246
+00:07:52,240 --> 00:07:54,240
+now but that frontier LMS could only
+
+247
+00:07:54,240 --> 00:07:56,639
+follow about 150 to 200 instructions
+
+248
+00:07:56,639 --> 00:07:58,479
+with like good consistency anything more
+
+249
+00:07:58,479 --> 00:07:59,680
+than that and it's kind of half
+
+250
+00:07:59,680 --> 00:08:01,440
+attending to all of them and you're
+
+251
+00:08:01,440 --> 00:08:04,000
+rolling the dice so if you have a prompt
+
+252
+00:08:04,000 --> 00:08:06,400
+with 85 instructions and your cloud MD
+
+253
+00:08:06,400 --> 00:08:07,919
+and your system prompt and your tools
+
+254
+00:08:07,919 --> 00:08:09,840
+and your MCP
+
+255
+00:08:09,840 --> 00:08:12,479
+um yeah you're not likely to get full
+
+256
+00:08:12,479 --> 00:08:14,800
+adherence to the workflow. So, more on
+
+257
+00:08:14,800 --> 00:08:16,879
+how we fix this later. The other thing
+
+258
+00:08:16,879 --> 00:08:18,879
+that I think um really wasn't working
+
+259
+00:08:18,879 --> 00:08:21,199
+for people was like we advocated for
+
+260
+00:08:21,199 --> 00:08:23,280
+reading the plans that were output. This
+
+261
+00:08:23,280 --> 00:08:25,120
+is me on stage in November telling
+
+262
+00:08:25,120 --> 00:08:26,639
+people you have to read the plan
+
+263
+00:08:26,639 --> 00:08:29,280
+otherwise it won't work. Um some people
+
+264
+00:08:29,280 --> 00:08:31,280
+even would PR their plans and code
+
+265
+00:08:31,280 --> 00:08:33,279
+review them together. But a thousand
+
+266
+00:08:33,279 --> 00:08:35,120
+line plan tends to be about a thousand
+
+267
+00:08:35,120 --> 00:08:37,360
+lines of code within 10% or so. And
+
+268
+00:08:37,360 --> 00:08:38,800
+plans can have surprises. So you would
+
+269
+00:08:38,800 --> 00:08:41,039
+go and you would review the plan and
+
+270
+00:08:41,039 --> 00:08:42,880
+then you would go write the code and it
+
+271
+00:08:42,880 --> 00:08:44,000
+would be different. And so you're
+
+272
+00:08:44,000 --> 00:08:44,880
+telling you're asking one of your
+
+273
+00:08:44,880 --> 00:08:46,560
+co-workers like, "Okay, go spend an hour
+
+274
+00:08:46,560 --> 00:08:47,680
+reading this and tell me what's wrong
+
+275
+00:08:47,680 --> 00:08:48,720
+with it." And then you would go
+
+276
+00:08:48,720 --> 00:08:49,680
+implement it. It would be different.
+
+277
+00:08:49,680 --> 00:08:51,120
+They have to go read the code again and
+
+278
+00:08:51,120 --> 00:08:52,560
+see what the surprises were and what
+
+279
+00:08:52,560 --> 00:08:55,839
+changed. Um, and so this isn't leverage.
+
+280
+00:08:55,839 --> 00:08:57,839
+Leverage is about like do less work to
+
+281
+00:08:57,839 --> 00:09:01,200
+get more output. So the new advice, uh,
+
+282
+00:09:01,200 --> 00:09:04,000
+don't read the plans. Please read the
+
+283
+00:09:04,000 --> 00:09:06,000
+code. Uh, just because it's it's the
+
+284
+00:09:06,000 --> 00:09:07,279
+same amount of work and like look for
+
+285
+00:09:07,279 --> 00:09:08,640
+leverage elsewhere. And I'll talk about
+
+286
+00:09:08,640 --> 00:09:10,560
+how we found better leverage. Um, and
+
+287
+00:09:10,560 --> 00:09:12,560
+you may say, "Hey, Dex, in August you
+
+288
+00:09:12,560 --> 00:09:13,920
+said don't read the code." You said the
+
+289
+00:09:13,920 --> 00:09:15,279
+plans are enough. Just don't just just
+
+290
+00:09:15,279 --> 00:09:18,000
+go just ship and let Cloud do its thing.
+
+291
+00:09:18,000 --> 00:09:20,480
+I was wrong. I am humble enough to admit
+
+292
+00:09:20,480 --> 00:09:21,920
+when I was wrong. Uh, this is actually a
+
+293
+00:09:21,920 --> 00:09:24,480
+very big conversation right now. Please
+
+294
+00:09:24,480 --> 00:09:26,080
+please read the code. We tried not
+
+295
+00:09:26,080 --> 00:09:27,600
+reading the code for like six months.
+
+296
+00:09:27,600 --> 00:09:29,040
+Uh, it did not end well. We had to rip
+
+297
+00:09:29,040 --> 00:09:30,320
+out and replace large parts of that
+
+298
+00:09:30,320 --> 00:09:32,720
+system. Um, and you may say, "Hey, Dex,
+
+299
+00:09:32,720 --> 00:09:34,640
+but other people don't read the code."
+
+300
+00:09:34,640 --> 00:09:36,959
+Beads, 300,000 lines and counting. Uh,
+
+301
+00:09:36,959 --> 00:09:39,360
+no one's read that code allegedly. Uh,
+
+302
+00:09:39,360 --> 00:09:41,839
+OpenClaw Pete's like, "Okay, you know, I
+
+303
+00:09:41,839 --> 00:09:43,120
+know the structure and the pieces and
+
+304
+00:09:43,120 --> 00:09:44,399
+how they fit together, but I don't read
+
+305
+00:09:44,399 --> 00:09:47,040
+every line of every PR. Um, these are
+
+306
+00:09:47,040 --> 00:09:52,120
+OSS projects. They don't charge money.
+
+307
+00:09:58,000 --> 00:10:00,000
+They are very very cool projects. I am
+
+308
+00:10:00,000 --> 00:10:02,000
+humbled, deeply humbled by the
+
+309
+00:10:02,000 --> 00:10:03,680
+accomplishments of the maintainers and
+
+310
+00:10:03,680 --> 00:10:05,760
+the stakes are still high. Like if you
+
+311
+00:10:05,760 --> 00:10:07,040
+break openclaw, a lot of people are
+
+312
+00:10:07,040 --> 00:10:09,440
+going to be upset but they are different
+
+313
+00:10:09,440 --> 00:10:10,720
+than if you're say working in a
+
+314
+00:10:10,720 --> 00:10:12,160
+regulated industry shipping production
+
+315
+00:10:12,160 --> 00:10:14,720
+SAS code. Um so if you have people who
+
+316
+00:10:14,720 --> 00:10:17,440
+depend on your code, please I'm begging
+
+317
+00:10:17,440 --> 00:10:19,839
+you please read it. Please read it. We
+
+318
+00:10:19,839 --> 00:10:22,399
+have a profession to uphold. 2026 is
+
+319
+00:10:22,399 --> 00:10:25,120
+supposed to be the year of no more slop.
+
+320
+00:10:25,120 --> 00:10:26,800
+Uh, literally everyone is talking about
+
+321
+00:10:26,800 --> 00:10:29,120
+the difference between slop and craft.
+
+322
+00:10:29,120 --> 00:10:31,519
+Uh, this is why I'm a little mid on
+
+323
+00:10:31,519 --> 00:10:33,600
+agent swarms and the whole gas town
+
+324
+00:10:33,600 --> 00:10:35,200
+thing because you still need to be able
+
+325
+00:10:35,200 --> 00:10:37,600
+to ensure quality and like going 10
+
+326
+00:10:37,600 --> 00:10:38,880
+times faster doesn't matter if you're
+
+327
+00:10:38,880 --> 00:10:40,720
+going to throw it all away in 6 months.
+
+328
+00:10:40,720 --> 00:10:42,560
+So, shoot for 2 to 3x. That's actually
+
+329
+00:10:42,560 --> 00:10:43,839
+another talk of like how you measure
+
+330
+00:10:43,839 --> 00:10:45,200
+this and how you actually get there and
+
+331
+00:10:45,200 --> 00:10:46,640
+maintain like a near human level of
+
+332
+00:10:46,640 --> 00:10:48,959
+quality. Um, but I'll talk about the
+
+333
+00:10:48,959 --> 00:10:49,839
+goals and like what you should think
+
+334
+00:10:49,839 --> 00:10:51,360
+about if you want to get there is you
+
+335
+00:10:51,360 --> 00:10:53,440
+should have high leverage planning. you
+
+336
+00:10:53,440 --> 00:10:55,360
+should not outsource the thinking, read
+
+337
+00:10:55,360 --> 00:10:57,839
+and own the code and ideally we will
+
+338
+00:10:57,839 --> 00:11:02,079
+avoid uh magic words. So uh we got
+
+339
+00:11:02,079 --> 00:11:03,519
+better research, we got better plans, we
+
+340
+00:11:03,519 --> 00:11:04,560
+got better leverage. I'm going to talk
+
+341
+00:11:04,560 --> 00:11:07,440
+about each of those um as far as like in
+
+342
+00:11:07,440 --> 00:11:08,880
+general what we and like in specifically
+
+343
+00:11:08,880 --> 00:11:10,640
+what we did and also some general
+
+344
+00:11:10,640 --> 00:11:12,160
+concepts as you're building workflows
+
+345
+00:11:12,160 --> 00:11:13,680
+and systems around coding agents what
+
+346
+00:11:13,680 --> 00:11:15,680
+you can do. So we talked about a skilled
+
+347
+00:11:15,680 --> 00:11:16,959
+this is the least exciting one but
+
+348
+00:11:16,959 --> 00:11:18,160
+talked about how a skilled engineer
+
+349
+00:11:18,160 --> 00:11:19,600
+could detangle the ticket to the
+
+350
+00:11:19,600 --> 00:11:21,680
+questions to the research uh and then
+
+351
+00:11:21,680 --> 00:11:24,800
+the research would be very objective. Um
+
+352
+00:11:24,800 --> 00:11:26,480
+basically we just hide the ticket from
+
+353
+00:11:26,480 --> 00:11:28,079
+the context window that's doing research
+
+354
+00:11:28,079 --> 00:11:30,079
+and we do it deterministically. So
+
+355
+00:11:30,079 --> 00:11:31,680
+basically you have one context window to
+
+356
+00:11:31,680 --> 00:11:32,959
+generate questions and then a fresh
+
+357
+00:11:32,959 --> 00:11:34,480
+context window with no knowledge of what
+
+358
+00:11:34,480 --> 00:11:36,240
+we're building to go make your research
+
+359
+00:11:36,240 --> 00:11:38,480
+doc. Um this is pretty trivial if you're
+
+360
+00:11:38,480 --> 00:11:39,600
+familiar with the concept of query
+
+361
+00:11:39,600 --> 00:11:43,279
+planning. Um it's similar in concept but
+
+362
+00:11:43,279 --> 00:11:45,040
+for you know LMS reading through code
+
+363
+00:11:45,040 --> 00:11:48,000
+bases. Um so I've been hacking on agents
+
+364
+00:11:48,000 --> 00:11:49,440
+for a while and before we did the coding
+
+365
+00:11:49,440 --> 00:11:51,120
+agent stuff I wrote this paper called 12
+
+366
+00:11:51,120 --> 00:11:53,680
+factor agents which was uh allegedly the
+
+367
+00:11:53,680 --> 00:11:55,279
+first time anyone was like talking a lot
+
+368
+00:11:55,279 --> 00:11:58,000
+about context engineering. Uh there's
+
+369
+00:11:58,000 --> 00:12:00,320
+two ways to read context engineering and
+
+370
+00:12:00,320 --> 00:12:01,760
+most people jumped in. Is anyone
+
+371
+00:12:01,760 --> 00:12:03,600
+building like rag pipelines? Is it raise
+
+372
+00:12:03,600 --> 00:12:05,920
+your hand if you built a rag pipeline?
+
+373
+00:12:05,920 --> 00:12:07,680
+Okay. Some people are feeling uh not
+
+374
+00:12:07,680 --> 00:12:10,639
+like not raising their hands today. Um,
+
+375
+00:12:10,639 --> 00:12:11,680
+but it's like, okay, put more
+
+376
+00:12:11,680 --> 00:12:12,560
+information. You put too much
+
+377
+00:12:12,560 --> 00:12:13,760
+information in, the model can't make
+
+378
+00:12:13,760 --> 00:12:15,200
+sense of it. I actually think the more
+
+379
+00:12:15,200 --> 00:12:17,279
+interesting read of context engineering
+
+380
+00:12:17,279 --> 00:12:19,600
+is like better instructions and simpler
+
+381
+00:12:19,600 --> 00:12:21,600
+tasks and smaller context windows. Of
+
+382
+00:12:21,600 --> 00:12:22,880
+course, we all know Jeff now. I don't
+
+383
+00:12:22,880 --> 00:12:24,079
+have to introduce him anymore. I used to
+
+384
+00:12:24,079 --> 00:12:25,120
+have to I used to have to tell people
+
+385
+00:12:25,120 --> 00:12:28,240
+who Jeff was when I was talking. Um, we
+
+386
+00:12:28,240 --> 00:12:29,680
+talked about this like context window
+
+387
+00:12:29,680 --> 00:12:31,440
+thing as the idea of the dumb zone,
+
+388
+00:12:31,440 --> 00:12:34,639
+which is, you know, you have about
+
+389
+00:12:34,639 --> 00:12:37,040
+168,000 tokens and 200,000, but some of
+
+390
+00:12:37,040 --> 00:12:38,240
+them are reserved for output. you have
+
+391
+00:12:38,240 --> 00:12:39,279
+various things that they're for and
+
+392
+00:12:39,279 --> 00:12:41,839
+around like 40% on average depending on
+
+393
+00:12:41,839 --> 00:12:42,959
+what you're doing and how much of your
+
+394
+00:12:42,959 --> 00:12:44,800
+context is user messages versus files
+
+395
+00:12:44,800 --> 00:12:46,639
+and all of this stuff you hit this point
+
+396
+00:12:46,639 --> 00:12:48,560
+where you have degrading results and
+
+397
+00:12:48,560 --> 00:12:50,240
+obviously sometimes you can get still
+
+398
+00:12:50,240 --> 00:12:52,880
+get good enough for you results at 60%
+
+399
+00:12:52,880 --> 00:12:54,399
+but the less of the context window you
+
+400
+00:12:54,399 --> 00:12:56,560
+use the better results you will get. Um
+
+401
+00:12:56,560 --> 00:12:57,760
+our friends at data bricks were just
+
+402
+00:12:57,760 --> 00:12:59,519
+talking about you have too many MCPs the
+
+403
+00:12:59,519 --> 00:13:00,639
+whole context window is full of
+
+404
+00:13:00,639 --> 00:13:01,839
+instructions about how to use a bunch of
+
+405
+00:13:01,839 --> 00:13:03,279
+tools that you don't care about and then
+
+406
+00:13:03,279 --> 00:13:04,399
+by the time you're writing code the
+
+407
+00:13:04,399 --> 00:13:05,680
+model is like not good at following your
+
+408
+00:13:05,680 --> 00:13:07,440
+instructions. So you're not just giving
+
+409
+00:13:07,440 --> 00:13:09,440
+the model too much information, you're
+
+410
+00:13:09,440 --> 00:13:11,040
+also probably giving it too many
+
+411
+00:13:11,040 --> 00:13:12,639
+instructions.
+
+412
+00:13:12,639 --> 00:13:14,320
+And so the idea of what we were doing
+
+413
+00:13:14,320 --> 00:13:16,160
+was this thing like makes a lot of
+
+414
+00:13:16,160 --> 00:13:17,839
+sense. Use prompts for control flow.
+
+415
+00:13:17,839 --> 00:13:19,839
+This is a customer support example, but
+
+416
+00:13:19,839 --> 00:13:21,040
+you know, if it's a complaint, go do
+
+417
+00:13:21,040 --> 00:13:22,639
+this. If it's product feedback, go do
+
+418
+00:13:22,639 --> 00:13:24,160
+this. If it's a billing issue, go do
+
+419
+00:13:24,160 --> 00:13:27,120
+this. Um, and what you can do instead is
+
+420
+00:13:27,120 --> 00:13:28,399
+you can instead of using prompts for
+
+421
+00:13:28,399 --> 00:13:30,399
+control flow, you can kind of classify
+
+422
+00:13:30,399 --> 00:13:32,720
+the input and then feed it to a series
+
+423
+00:13:32,720 --> 00:13:34,639
+of smaller, more focused prompts where
+
+424
+00:13:34,639 --> 00:13:36,560
+there are far fewer instructions and far
+
+425
+00:13:36,560 --> 00:13:38,399
+fewer actions to choose from. I'm sure
+
+426
+00:13:38,399 --> 00:13:39,680
+many of us have already done things like
+
+427
+00:13:39,680 --> 00:13:41,279
+this to improve the performance of
+
+428
+00:13:41,279 --> 00:13:43,519
+pipelines. Um, so this was a single mega
+
+429
+00:13:43,519 --> 00:13:46,240
+prompt with 85 instructions. Um, and if
+
+430
+00:13:46,240 --> 00:13:47,279
+you did it right, you would go through
+
+431
+00:13:47,279 --> 00:13:48,560
+all these different steps. All these
+
+432
+00:13:48,560 --> 00:13:49,600
+different phases were part of that. And
+
+433
+00:13:49,600 --> 00:13:50,880
+if any of the instructions didn't get
+
+434
+00:13:50,880 --> 00:13:52,560
+followed, you would skip the things that
+
+435
+00:13:52,560 --> 00:13:54,720
+made this really high leverage. Um, so
+
+436
+00:13:54,720 --> 00:13:56,639
+we split it across several prompts and
+
+437
+00:13:56,639 --> 00:13:58,160
+so like before it was research, plan,
+
+438
+00:13:58,160 --> 00:13:59,600
+implement. Now it's questions, research,
+
+439
+00:13:59,600 --> 00:14:00,800
+design, structure, plan, work,
+
+440
+00:14:00,800 --> 00:14:02,399
+implement, PR. We're actually not going
+
+441
+00:14:02,399 --> 00:14:03,680
+to have time to talk about the implement
+
+442
+00:14:03,680 --> 00:14:06,560
+side of the thing today, but um, we
+
+443
+00:14:06,560 --> 00:14:08,000
+split up the planning into a design
+
+444
+00:14:08,000 --> 00:14:11,120
+discussion and outline and a plan. And
+
+445
+00:14:11,120 --> 00:14:13,279
+before it was 85 instructions, now
+
+446
+00:14:13,279 --> 00:14:14,880
+they're all less than 40, which is
+
+447
+00:14:14,880 --> 00:14:16,079
+really exciting. And I think some of
+
+448
+00:14:16,079 --> 00:14:17,279
+them could actually be even smaller.
+
+449
+00:14:17,279 --> 00:14:18,639
+We're still iterating on them. The
+
+450
+00:14:18,639 --> 00:14:20,079
+lesson is don't use prompts for control
+
+451
+00:14:20,079 --> 00:14:21,680
+flow if you can use control flow for
+
+452
+00:14:21,680 --> 00:14:23,839
+control flow. Like the if statement is
+
+453
+00:14:23,839 --> 00:14:25,600
+really really powerful and LM are really
+
+454
+00:14:25,600 --> 00:14:27,040
+good at classifying things. This is not
+
+455
+00:14:27,040 --> 00:14:28,639
+just true for coding agents. This is any
+
+456
+00:14:28,639 --> 00:14:31,440
+AI LLM based system you're building. Um
+
+457
+00:14:31,440 --> 00:14:32,560
+and it's really funny because we were
+
+458
+00:14:32,560 --> 00:14:33,760
+writing all this stuff and we got on
+
+459
+00:14:33,760 --> 00:14:35,760
+stage we said like full fat agents don't
+
+460
+00:14:35,760 --> 00:14:37,519
+work. Don't just call tools in a loop.
+
+461
+00:14:37,519 --> 00:14:38,959
+Do context engineering and build
+
+462
+00:14:38,959 --> 00:14:40,800
+workflows and graphs and micro agents.
+
+463
+00:14:40,800 --> 00:14:42,880
+We told everybody don't do this. And
+
+464
+00:14:42,880 --> 00:14:44,079
+then we turned around in August and
+
+465
+00:14:44,079 --> 00:14:46,000
+we're like all right but this cloud code
+
+466
+00:14:46,000 --> 00:14:47,040
+thing is pretty good. And we turned
+
+467
+00:14:47,040 --> 00:14:48,320
+around and we wrote this giant
+
+468
+00:14:48,320 --> 00:14:50,320
+monolithic prompt. So, we figured it was
+
+469
+00:14:50,320 --> 00:14:51,440
+time to actually go drink our own
+
+470
+00:14:51,440 --> 00:14:54,720
+Kool-Aid. Um, mind your instruction
+
+471
+00:14:54,720 --> 00:14:56,320
+budget.
+
+472
+00:14:56,320 --> 00:14:58,079
+How do we get better leverage? So, we
+
+473
+00:14:58,079 --> 00:14:58,959
+split things up to get better
+
+474
+00:14:58,959 --> 00:15:01,040
+instruction following, right? These
+
+475
+00:15:01,040 --> 00:15:02,880
+three different phases. But we also got
+
+476
+00:15:02,880 --> 00:15:04,000
+more leverage. I'm going to talk about
+
+477
+00:15:04,000 --> 00:15:05,680
+why. Because even if the plan is a
+
+478
+00:15:05,680 --> 00:15:07,199
+thousand lines and the code is 1,000
+
+479
+00:15:07,199 --> 00:15:08,959
+lines, your design discussion might only
+
+480
+00:15:08,959 --> 00:15:10,720
+be 200 lines. And you get a lot of
+
+481
+00:15:10,720 --> 00:15:12,639
+opportunities to resteer in that moment.
+
+482
+00:15:12,639 --> 00:15:13,839
+And so, what this looks like is
+
+483
+00:15:13,839 --> 00:15:15,519
+basically where are we going? What does
+
+484
+00:15:15,519 --> 00:15:17,440
+the final solution look like? And it
+
+485
+00:15:17,440 --> 00:15:18,639
+has, you know, the current state, the
+
+486
+00:15:18,639 --> 00:15:20,720
+desired end state, it has the patterns
+
+487
+00:15:20,720 --> 00:15:22,000
+to follow. How many of you ever like
+
+488
+00:15:22,000 --> 00:15:23,760
+sent off a coding agent and it like
+
+489
+00:15:23,760 --> 00:15:25,360
+found the wrong way to do a thing in
+
+490
+00:15:25,360 --> 00:15:26,959
+your codebase and it followed the bad
+
+491
+00:15:26,959 --> 00:15:29,839
+patterns? Yes. Right. This is your
+
+492
+00:15:29,839 --> 00:15:31,279
+chance to go read all the patterns it
+
+493
+00:15:31,279 --> 00:15:32,880
+found that it thinks are relevant and be
+
+494
+00:15:32,880 --> 00:15:34,240
+like, "Nope, that's not how we do atomic
+
+495
+00:15:34,240 --> 00:15:35,839
+SQL updates. That's some engineer that
+
+496
+00:15:35,839 --> 00:15:37,120
+doesn't work here anymore and it's crazy
+
+497
+00:15:37,120 --> 00:15:38,399
+and everyone hates it. Go find the way
+
+498
+00:15:38,399 --> 00:15:40,800
+we do it over there." Um, it'll keep
+
+499
+00:15:40,800 --> 00:15:42,160
+track of resolved design decisions that
+
+500
+00:15:42,160 --> 00:15:44,079
+we've made. It will ask open questions.
+
+501
+00:15:44,079 --> 00:15:46,720
+This is sort of like taking cloud code
+
+502
+00:15:46,720 --> 00:15:48,720
+plan mode and the ask user question tool
+
+503
+00:15:48,720 --> 00:15:50,240
+and just brain dumping it all to a
+
+504
+00:15:50,240 --> 00:15:51,519
+single document that you can interact
+
+505
+00:15:51,519 --> 00:15:54,480
+with is like moldable and flexible. Um
+
+506
+00:15:54,480 --> 00:15:56,160
+Matt PCO has this idea, he calls it the
+
+507
+00:15:56,160 --> 00:15:58,160
+design concept and it's this idea of
+
+508
+00:15:58,160 --> 00:16:00,399
+like the thing that is locked up in this
+
+509
+00:16:00,399 --> 00:16:03,040
+context window that is the shared
+
+510
+00:16:03,040 --> 00:16:04,560
+understanding between you and the agent
+
+511
+00:16:04,560 --> 00:16:07,040
+of what's being built and how. Uh so we
+
+512
+00:16:07,040 --> 00:16:09,839
+put in a 200line markdown artifact. Um,
+
+513
+00:16:09,839 --> 00:16:11,519
+and so we now have human agent
+
+514
+00:16:11,519 --> 00:16:13,040
+alignment. And the idea here is like
+
+515
+00:16:13,040 --> 00:16:14,800
+you're forcing the agent to brain dump
+
+516
+00:16:14,800 --> 00:16:16,079
+out all the things it found, all the
+
+517
+00:16:16,079 --> 00:16:17,360
+things it wants to do, all the things it
+
+518
+00:16:17,360 --> 00:16:19,199
+thinks you want, and ask you questions
+
+519
+00:16:19,199 --> 00:16:20,959
+about things it doesn't know. So you can
+
+520
+00:16:20,959 --> 00:16:22,880
+do brain surgery on the agent before you
+
+521
+00:16:22,880 --> 00:16:24,800
+proceed downstream. And it's all about
+
+522
+00:16:24,800 --> 00:16:26,399
+do not outsource the thinking. You want
+
+523
+00:16:26,399 --> 00:16:27,680
+to give the agent every single
+
+524
+00:16:27,680 --> 00:16:29,680
+opportunity to show you what it's wrong
+
+525
+00:16:29,680 --> 00:16:32,160
+about before you go write 2,000 lines of
+
+526
+00:16:32,160 --> 00:16:35,680
+code. So uh, 200 lines instead of a,000,
+
+527
+00:16:35,680 --> 00:16:37,440
+a little bit more leverage. We also get
+
+528
+00:16:37,440 --> 00:16:39,360
+better leverage from the outline. So if
+
+529
+00:16:39,360 --> 00:16:41,759
+design is like where are we going the
+
+530
+00:16:41,759 --> 00:16:43,920
+structure outline is how do we get there
+
+531
+00:16:43,920 --> 00:16:45,199
+or if you're an engineer who is
+
+532
+00:16:45,199 --> 00:16:46,560
+miserable because of sitting in meetings
+
+533
+00:16:46,560 --> 00:16:48,639
+all day there's the like architecture
+
+534
+00:16:48,639 --> 00:16:50,160
+review and then there's the sprint
+
+535
+00:16:50,160 --> 00:16:51,839
+planning meeting what are we going to
+
+536
+00:16:51,839 --> 00:16:53,279
+build and then how do we break it down
+
+537
+00:16:53,279 --> 00:16:56,240
+into tasks and so we take our design and
+
+538
+00:16:56,240 --> 00:16:57,759
+we take it to ticket and the research we
+
+539
+00:16:57,759 --> 00:16:59,680
+build up a new context window and we
+
+540
+00:16:59,680 --> 00:17:02,160
+create the structure outline and this is
+
+541
+00:17:02,160 --> 00:17:04,160
+basically highle overview of the phases
+
+542
+00:17:04,160 --> 00:17:05,839
+not the exact code we're going to write
+
+543
+00:17:05,839 --> 00:17:07,120
+but just kind of what it's going to look
+
+544
+00:17:07,120 --> 00:17:08,959
+like what order we're going do the
+
+545
+00:17:08,959 --> 00:17:10,559
+changes in and how we're going to test
+
+546
+00:17:10,559 --> 00:17:12,000
+it along the way. Now, I don't actually
+
+547
+00:17:12,000 --> 00:17:13,679
+test in between every phase, everything
+
+548
+00:17:13,679 --> 00:17:15,120
+I'm building, but if it's sensitive or
+
+549
+00:17:15,120 --> 00:17:17,360
+if it's hard or if it's complex, I want
+
+550
+00:17:17,360 --> 00:17:19,439
+to be able to catch it before it goes
+
+551
+00:17:19,439 --> 00:17:21,039
+and writes all the code. I want to make
+
+552
+00:17:21,039 --> 00:17:23,280
+sure each two, three, 400 line block is
+
+553
+00:17:23,280 --> 00:17:25,520
+correct. Um, and these docs mean lighter
+
+554
+00:17:25,520 --> 00:17:27,360
+reviews. Instead of reviewing the plan,
+
+555
+00:17:27,360 --> 00:17:29,039
+this is two things for the same feature.
+
+556
+00:17:29,039 --> 00:17:30,880
+Plan, eight pages, structure outline,
+
+557
+00:17:30,880 --> 00:17:33,840
+two-ish pages, much shorter. Um, I like
+
+558
+00:17:33,840 --> 00:17:35,120
+to think of this, has anyone ever
+
+559
+00:17:35,120 --> 00:17:38,000
+written a C header file, ah file? Yeah.
+
+560
+00:17:38,000 --> 00:17:39,600
+Okay, so if the plan is the
+
+561
+00:17:39,600 --> 00:17:41,120
+implementation, the outline is the C
+
+562
+00:17:41,120 --> 00:17:42,720
+header files. Just here's the signatures
+
+563
+00:17:42,720 --> 00:17:44,480
+and the new types that we're changing
+
+564
+00:17:44,480 --> 00:17:46,640
+enough again for you to see what the
+
+565
+00:17:46,640 --> 00:17:48,480
+agent is thinking and correct it if it's
+
+566
+00:17:48,480 --> 00:17:50,720
+wrong. Um, and the reason why we do this
+
+567
+00:17:50,720 --> 00:17:53,600
+is despite like every single model and
+
+568
+00:17:53,600 --> 00:17:55,120
+trying to prompt this out and eval the
+
+569
+00:17:55,120 --> 00:17:56,559
+hell out of this, we cannot get models
+
+570
+00:17:56,559 --> 00:17:59,039
+to stop writing horizontal plans or it
+
+571
+00:17:59,039 --> 00:18:01,200
+like this is the best way to fix their
+
+572
+00:18:01,200 --> 00:18:02,880
+need to write horizontal plans. And when
+
+573
+00:18:02,880 --> 00:18:05,600
+I say horizontal plans, I basically mean
+
+574
+00:18:05,600 --> 00:18:07,840
+you start with models love to like we're
+
+575
+00:18:07,840 --> 00:18:08,880
+going to do all the database and then
+
+576
+00:18:08,880 --> 00:18:09,919
+we're going to do all the services and
+
+577
+00:18:09,919 --> 00:18:11,120
+then we're going to do all the API and
+
+578
+00:18:11,120 --> 00:18:12,080
+then we're going to do all the front end
+
+579
+00:18:12,080 --> 00:18:13,679
+and before you know it, you're on the
+
+580
+00:18:13,679 --> 00:18:16,080
+other side of,200 lines of code and it's
+
+581
+00:18:16,080 --> 00:18:18,000
+not working and now you have to go
+
+582
+00:18:18,000 --> 00:18:19,280
+figure out which part is broken because
+
+583
+00:18:19,280 --> 00:18:20,880
+there was no nothing really to test
+
+584
+00:18:20,880 --> 00:18:22,799
+along the way whether the model is
+
+585
+00:18:22,799 --> 00:18:24,400
+verifying it or whether you the human
+
+586
+00:18:24,400 --> 00:18:25,440
+are jumping in and checking it's
+
+587
+00:18:25,440 --> 00:18:27,840
+correct. And so what we've seen work
+
+588
+00:18:27,840 --> 00:18:29,520
+really really well across orgs of all
+
+589
+00:18:29,520 --> 00:18:32,640
+sizes um is what I call vertical plans.
+
+590
+00:18:32,640 --> 00:18:34,480
+This is how I build when I'm like before
+
+591
+00:18:34,480 --> 00:18:36,640
+AI I would like make a mock API endpoint
+
+592
+00:18:36,640 --> 00:18:37,919
+and then get it working in the front end
+
+593
+00:18:37,919 --> 00:18:39,760
+and then wire that and then mock out the
+
+594
+00:18:39,760 --> 00:18:41,760
+services layer and then do the database
+
+595
+00:18:41,760 --> 00:18:43,520
+migration and then put everything
+
+596
+00:18:43,520 --> 00:18:46,400
+together. And so even though it's the
+
+597
+00:18:46,400 --> 00:18:48,000
+same amount of code you have these like
+
+598
+00:18:48,000 --> 00:18:49,440
+checkpoints where you can see if it's
+
+599
+00:18:49,440 --> 00:18:51,039
+working and if it's not you can pause
+
+600
+00:18:51,039 --> 00:18:53,200
+and fix it before you go try to do the
+
+601
+00:18:53,200 --> 00:18:55,200
+rest of it. So these are just markdown
+
+602
+00:18:55,200 --> 00:18:56,480
+docs too. Like you can and should ask
+
+603
+00:18:56,480 --> 00:18:57,760
+for more detail. They start high level,
+
+604
+00:18:57,760 --> 00:18:59,600
+but like here's an example of like I
+
+605
+00:18:59,600 --> 00:19:00,480
+don't think you're going to get this
+
+606
+00:19:00,480 --> 00:19:01,919
+right. Tell me what you're thinking. And
+
+607
+00:19:01,919 --> 00:19:03,360
+it like dumped out the types and the
+
+608
+00:19:03,360 --> 00:19:04,880
+signatures.
+
+609
+00:19:04,880 --> 00:19:06,480
+Um and then getting better leverage from
+
+610
+00:19:06,480 --> 00:19:09,120
+the plan itself. I mean again like usual
+
+611
+00:19:09,120 --> 00:19:10,480
+like we've been doing. We just take that
+
+612
+00:19:10,480 --> 00:19:11,919
+artifact, we build it up with all the
+
+613
+00:19:11,919 --> 00:19:13,679
+previous artifacts and then we can go
+
+614
+00:19:13,679 --> 00:19:16,000
+build the plan. Um and it is the same if
+
+615
+00:19:16,000 --> 00:19:17,280
+you use create plan. It's the exact same
+
+616
+00:19:17,280 --> 00:19:18,799
+template, exact same setup, exact same
+
+617
+00:19:18,799 --> 00:19:20,640
+prompt, but this is a tactical doc for
+
+618
+00:19:20,640 --> 00:19:22,080
+the agent. we've already done enough
+
+619
+00:19:22,080 --> 00:19:24,160
+aligning that like I'm just going to
+
+620
+00:19:24,160 --> 00:19:26,080
+spot check this and then we save the
+
+621
+00:19:26,080 --> 00:19:28,720
+deep review for the actual code. And so
+
+622
+00:19:28,720 --> 00:19:30,559
+if you've used any of the RPI plans,
+
+623
+00:19:30,559 --> 00:19:31,679
+they look like this. It's the model
+
+624
+00:19:31,679 --> 00:19:32,799
+saying, "Hey, here's all the changes I'm
+
+625
+00:19:32,799 --> 00:19:35,520
+going to make." Um, the most important
+
+626
+00:19:35,520 --> 00:19:36,880
+part of this leverage is not just about
+
+627
+00:19:36,880 --> 00:19:38,720
+you and the agent, though. like human
+
+628
+00:19:38,720 --> 00:19:40,240
+agent alignment is important and knowing
+
+629
+00:19:40,240 --> 00:19:41,440
+what the agent's going to do and
+
+630
+00:19:41,440 --> 00:19:44,160
+correcting that is is good but it's also
+
+631
+00:19:44,160 --> 00:19:45,679
+you know if you're working with a team
+
+632
+00:19:45,679 --> 00:19:48,080
+of engineers we've found a lot of value
+
+633
+00:19:48,080 --> 00:19:49,600
+from taking these design discussions
+
+634
+00:19:49,600 --> 00:19:51,120
+these structure outlines and review I
+
+635
+00:19:51,120 --> 00:19:53,200
+said don't review the plans but these
+
+636
+00:19:53,200 --> 00:19:57,039
+shorter docs are really really good uh I
+
+637
+00:19:57,039 --> 00:19:59,120
+I am not the code owner of most of our
+
+638
+00:19:59,120 --> 00:20:01,600
+code at human layer my uh co-founder is
+
+639
+00:20:01,600 --> 00:20:04,240
+and I send him my design discussions on
+
+640
+00:20:04,240 --> 00:20:06,080
+purpose we don't have a required step
+
+641
+00:20:06,080 --> 00:20:07,440
+but I want to I want to know that when
+
+642
+00:20:07,440 --> 00:20:09,280
+we get code review, it's just going to
+
+643
+00:20:09,280 --> 00:20:10,720
+be like, "Yep, that's that's what I
+
+644
+00:20:10,720 --> 00:20:12,000
+wanted. That's it. That's it." So any
+
+645
+00:20:12,000 --> 00:20:14,880
+any of my bad decisions are headed off
+
+646
+00:20:14,880 --> 00:20:16,880
+on a 200line doc before I've gone and
+
+647
+00:20:16,880 --> 00:20:18,240
+written the code and gotten it working
+
+648
+00:20:18,240 --> 00:20:20,240
+and I'm attached to it. And so this is
+
+649
+00:20:20,240 --> 00:20:23,360
+really really powerful. Um before AI, we
+
+650
+00:20:23,360 --> 00:20:24,480
+would basically the way another way to
+
+651
+00:20:24,480 --> 00:20:26,160
+think about this is like time savings.
+
+652
+00:20:26,160 --> 00:20:27,280
+You would say, "Okay, it's a two-day
+
+653
+00:20:27,280 --> 00:20:28,880
+feature. I got to do all this stuff. The
+
+654
+00:20:28,880 --> 00:20:30,799
+coding is probably two to four hours."
+
+655
+00:20:30,799 --> 00:20:32,159
+If you just pick up cloud code and use
+
+656
+00:20:32,159 --> 00:20:34,000
+it to ship for you, you do get some
+
+657
+00:20:34,000 --> 00:20:36,000
+speed up because now the coding takes 20
+
+658
+00:20:36,000 --> 00:20:37,520
+minutes. It's still a two-day feature
+
+659
+00:20:37,520 --> 00:20:38,880
+because I still have to like align with
+
+660
+00:20:38,880 --> 00:20:40,320
+my team on what we're going to do. I
+
+661
+00:20:40,320 --> 00:20:41,760
+still have to get a code review and fix
+
+662
+00:20:41,760 --> 00:20:43,520
+stuff. Maybe I'm working across repos
+
+663
+00:20:43,520 --> 00:20:45,280
+that I don't personally own and then we
+
+664
+00:20:45,280 --> 00:20:47,440
+still have to verify and test it. But if
+
+665
+00:20:47,440 --> 00:20:49,600
+you use AI to help you with your
+
+666
+00:20:49,600 --> 00:20:51,919
+planning and alignment, then you also
+
+667
+00:20:51,919 --> 00:20:54,400
+save time there. And I think you get
+
+668
+00:20:54,400 --> 00:20:56,480
+much better alignment. Um, and so your
+
+669
+00:20:56,480 --> 00:20:58,240
+code review and rework is also much
+
+670
+00:20:58,240 --> 00:20:59,520
+shorter because you already know what's
+
+671
+00:20:59,520 --> 00:21:00,720
+coming. The team that's reviewing it
+
+672
+00:21:00,720 --> 00:21:02,159
+already kind of like had their chance to
+
+673
+00:21:02,159 --> 00:21:04,000
+re steer you. And really good teams do
+
+674
+00:21:04,000 --> 00:21:05,440
+this. It's they have a meeting that's
+
+675
+00:21:05,440 --> 00:21:06,799
+called architecture review where we
+
+676
+00:21:06,799 --> 00:21:08,080
+decide, you know, what's our technical
+
+677
+00:21:08,080 --> 00:21:09,360
+design doc on how we're going to build
+
+678
+00:21:09,360 --> 00:21:12,000
+this. So, um, as far as testing and
+
+679
+00:21:12,000 --> 00:21:13,520
+verifying, sorry, I don't have a good
+
+680
+00:21:13,520 --> 00:21:15,440
+answer for you. It's a whole other talk.
+
+681
+00:21:15,440 --> 00:21:16,960
+If you went to Drew's talk downstairs,
+
+682
+00:21:16,960 --> 00:21:18,799
+go find Drew Brun after this. He will
+
+683
+00:21:18,799 --> 00:21:19,840
+tell you all about testing and
+
+684
+00:21:19,840 --> 00:21:21,760
+verifying. Um, let's put this all
+
+685
+00:21:21,760 --> 00:21:24,320
+together. So, we have these five stages
+
+686
+00:21:24,320 --> 00:21:26,559
+of research and planning. Um, the
+
+687
+00:21:26,559 --> 00:21:28,000
+process is basically questions,
+
+688
+00:21:28,000 --> 00:21:30,320
+research, design, structure, outline,
+
+689
+00:21:30,320 --> 00:21:32,960
+plan, work tree, implement. Finally, the
+
+690
+00:21:32,960 --> 00:21:35,280
+poll request. Uh, that didn't make a
+
+691
+00:21:35,280 --> 00:21:36,400
+very good acronym though, so we just
+
+692
+00:21:36,400 --> 00:21:38,080
+picked the ones we liked. And, uh, we're
+
+693
+00:21:38,080 --> 00:21:41,600
+calling this crispy. Uh, so RPI to
+
+694
+00:21:41,600 --> 00:21:43,679
+crispy. That's the There you go. Um,
+
+695
+00:21:43,679 --> 00:21:45,600
+what's next and what did I not have time
+
+696
+00:21:45,600 --> 00:21:47,840
+to talk about today? Um, three steps was
+
+697
+00:21:47,840 --> 00:21:49,120
+already a lot for some people to learn
+
+698
+00:21:49,120 --> 00:21:50,720
+and now there are seven. I thought we
+
+699
+00:21:50,720 --> 00:21:51,840
+were supposed to make this easier for
+
+700
+00:21:51,840 --> 00:21:53,679
+teams to learn this and adopt it. we can
+
+701
+00:21:53,679 --> 00:21:55,280
+talk about how we're like thinking about
+
+702
+00:21:55,280 --> 00:21:57,200
+that. Um the idea of how do you measure
+
+703
+00:21:57,200 --> 00:21:59,520
+the impact of doing this um in
+
+704
+00:21:59,520 --> 00:22:00,960
+engineering teams I think is like we've
+
+705
+00:22:00,960 --> 00:22:01,840
+been trying to measure developer
+
+706
+00:22:01,840 --> 00:22:03,600
+productivity for 50 years and we still
+
+707
+00:22:03,600 --> 00:22:06,000
+don't know how to do it very well. Um
+
+708
+00:22:06,000 --> 00:22:08,400
+and then it's like if you're a central
+
+709
+00:22:08,400 --> 00:22:10,080
+kind of platform team rolling out
+
+710
+00:22:10,080 --> 00:22:12,159
+changes to everybody in your org, how do
+
+711
+00:22:12,159 --> 00:22:13,840
+you make these prompts better? How do
+
+712
+00:22:13,840 --> 00:22:15,679
+you make this engineering system better?
+
+713
+00:22:15,679 --> 00:22:17,360
+I mean, um, we were just talking about
+
+714
+00:22:17,360 --> 00:22:19,120
+like, oh, every team has a skill now,
+
+715
+00:22:19,120 --> 00:22:20,720
+and we want to consolidate and make that
+
+716
+00:22:20,720 --> 00:22:22,080
+shared and let people benefit from each
+
+717
+00:22:22,080 --> 00:22:24,159
+other's learnings. How do you make that
+
+718
+00:22:24,159 --> 00:22:26,080
+stuff better without like breaking
+
+719
+00:22:26,080 --> 00:22:27,919
+somebody's workflow or regressing it for
+
+720
+00:22:27,919 --> 00:22:31,200
+some some team? Uh, if you want to help
+
+721
+00:22:31,200 --> 00:22:33,120
+us, if you're in San Francisco and
+
+722
+00:22:33,120 --> 00:22:34,480
+you're working on critical systems and
+
+723
+00:22:34,480 --> 00:22:36,159
+you want to like figure out how to get
+
+724
+00:22:36,159 --> 00:22:38,240
+coding agents to do more, uh, let's
+
+725
+00:22:38,240 --> 00:22:40,640
+chat. We're also hiring. Um, send us a
+
+726
+00:22:40,640 --> 00:22:43,440
+note either way. Foundershumanlayer.dev.
+
+727
+00:22:43,440 --> 00:22:45,520
+Uh we're building a IDE that
+
+728
+00:22:45,520 --> 00:22:47,760
+orchestrates this stuff for you. Uh you
+
+729
+00:22:47,760 --> 00:22:49,600
+don't need this to get this value out of
+
+730
+00:22:49,600 --> 00:22:50,640
+this, but this is the kind of stuff
+
+731
+00:22:50,640 --> 00:22:52,400
+we're working on. Uh if you want to hang
+
+732
+00:22:52,400 --> 00:22:54,799
+out, I'm doing a sandbox research
+
+733
+00:22:54,799 --> 00:22:56,559
+hackathon on Saturday. We're going to
+
+734
+00:22:56,559 --> 00:22:57,760
+just get together with a bunch of cool
+
+735
+00:22:57,760 --> 00:22:59,600
+builders, test all of the sandbox
+
+736
+00:22:59,600 --> 00:23:01,760
+providers together, uh and see which
+
+737
+00:23:01,760 --> 00:23:03,280
+one's the best and then share our
+
+738
+00:23:03,280 --> 00:23:04,480
+learnings. I'll be also be at the
+
+739
+00:23:04,480 --> 00:23:06,640
+Daytona Compute Conference. Uh and if
+
+740
+00:23:06,640 --> 00:23:08,720
+you feel like coming to Miami, uh AI
+
+741
+00:23:08,720 --> 00:23:09,840
+engineer Miami is going to be really
+
+742
+00:23:09,840 --> 00:23:11,919
+fun. will be giving uh the updated
+
+743
+00:23:11,919 --> 00:23:13,600
+version of this talk with more stuff
+
+744
+00:23:13,600 --> 00:23:15,520
+that I didn't have time to get to today.
+
+745
+00:23:15,520 --> 00:23:17,600
+Um, thank you so much to all of you for
+
+746
+00:23:17,600 --> 00:23:19,600
+your energy to Demetrios and the entire
+
+747
+00:23:19,600 --> 00:23:22,880
+organizing squad. Good luck.
+
+748
+00:23:22,880 --> 00:23:25,760
+>> Questions. Who's got a question for Dex?
+
+749
+00:23:25,760 --> 00:23:29,600
+That was super fast. I like it. I was
+
+750
+00:23:29,600 --> 00:23:31,039
+very doubtful that you were going to get
+
+751
+00:23:31,039 --> 00:23:32,320
+through it, but I like
+
+752
+00:23:32,320 --> 00:23:33,760
+>> All right. I'm I'm curious about reading
+
+753
+00:23:33,760 --> 00:23:36,240
+the code. Like, it's not scalable,
+
+754
+00:23:36,240 --> 00:23:37,440
+right? Like, are we are you going to be
+
+755
+00:23:37,440 --> 00:23:39,840
+saying the same thing in six months? I
+
+756
+00:23:39,840 --> 00:23:41,280
+mean, six months ago, I said not to read
+
+757
+00:23:41,280 --> 00:23:43,280
+it. Uh, and it was I think everyone who
+
+758
+00:23:43,280 --> 00:23:44,799
+is saying don't read the code now is
+
+759
+00:23:44,799 --> 00:23:46,080
+going to be in six months being like,
+
+760
+00:23:46,080 --> 00:23:47,120
+"Yeah, we had to throw that out."
+
+761
+00:23:47,120 --> 00:23:48,240
+There's something there's something in
+
+762
+00:23:48,240 --> 00:23:50,320
+the middle, right? U, we're binary
+
+763
+00:23:50,320 --> 00:23:52,720
+searching through the space uh of how
+
+764
+00:23:52,720 --> 00:23:55,679
+much of the code should you read. Um, I
+
+765
+00:23:55,679 --> 00:23:57,919
+think, yeah, the idea is if you still
+
+766
+00:23:57,919 --> 00:23:59,600
+read the code, you can still get two to
+
+767
+00:23:59,600 --> 00:24:01,120
+threex speed up. And that's actually
+
+768
+00:24:01,120 --> 00:24:05,760
+better business outcomes than uh than
+
+769
+00:24:05,760 --> 00:24:07,360
+going 10x faster and shipping a bunch of
+
+770
+00:24:07,360 --> 00:24:09,760
+slop and hoping that you know GPT7 will
+
+771
+00:24:09,760 --> 00:24:12,799
+fix it for you.
+
+772
+00:24:12,799 --> 00:24:16,080
+>> Yeah, I hit things. Uh awesome talk. Um
+
+773
+00:24:16,080 --> 00:24:18,640
+curious your thoughts on like the
+
+774
+00:24:18,640 --> 00:24:20,720
+software factory. I think it's like
+
+775
+00:24:20,720 --> 00:24:23,440
+strong DM that's saying the opposite
+
+776
+00:24:23,440 --> 00:24:26,640
+which is like never have a human read
+
+777
+00:24:26,640 --> 00:24:28,480
+either side of it. And I think that
+
+778
+00:24:28,480 --> 00:24:32,640
+pushes us further into eval.
+
+779
+00:24:32,640 --> 00:24:35,760
+So what is your thinking on that?
+
+780
+00:24:35,760 --> 00:24:37,520
+>> Yeah, there is a whole class of like
+
+781
+00:24:37,520 --> 00:24:38,720
+there's a whole rabbit hole you can go
+
+782
+00:24:38,720 --> 00:24:40,559
+down with like formal verification and
+
+783
+00:24:40,559 --> 00:24:42,960
+TLA plus or I talked to a guy who's
+
+784
+00:24:42,960 --> 00:24:45,440
+building a new TA plus that is TA++ that
+
+785
+00:24:45,440 --> 00:24:47,120
+is like okay what if we don't read the
+
+786
+00:24:47,120 --> 00:24:48,799
+code? How can we actually like formally
+
+787
+00:24:48,799 --> 00:24:52,240
+verify everything that's working? Uh, I
+
+788
+00:24:52,240 --> 00:24:54,159
+think there's a lot more to be built and
+
+789
+00:24:54,159 --> 00:24:55,360
+I think there's a lot of people right
+
+790
+00:24:55,360 --> 00:24:57,440
+now who need to ship like code to
+
+791
+00:24:57,440 --> 00:25:00,080
+production systems faster. So like maybe
+
+792
+00:25:00,080 --> 00:25:01,919
+someday, but like I used to site Sean
+
+793
+00:25:01,919 --> 00:25:03,760
+Gro's talk where he was like it's just
+
+794
+00:25:03,760 --> 00:25:05,360
+the spec. Just write the document that
+
+795
+00:25:05,360 --> 00:25:07,279
+explains the desired behavior and you
+
+796
+00:25:07,279 --> 00:25:08,640
+treat the code like it's assembly and
+
+797
+00:25:08,640 --> 00:25:11,919
+you never read it anymore. Um,
+
+798
+00:25:11,919 --> 00:25:14,240
+I do not endorse that. Let's put it that
+
+799
+00:25:14,240 --> 00:25:17,240
+way.
+
+800
+00:25:17,360 --> 00:25:20,880
+>> We got one more. All right, last one.
+
+801
+00:25:20,880 --> 00:25:22,880
+Uh I know you mentioned one of the
+
+802
+00:25:22,880 --> 00:25:25,600
+slides about the like context window and
+
+803
+00:25:25,600 --> 00:25:27,919
+uh the the dumb zone, right? Uh I know
+
+804
+00:25:27,919 --> 00:25:30,240
+you researched that like heavily a few
+
+805
+00:25:30,240 --> 00:25:32,159
+like have have you like gone back to
+
+806
+00:25:32,159 --> 00:25:34,000
+look at that again to see how true that
+
+807
+00:25:34,000 --> 00:25:36,720
+still is after certain like context
+
+808
+00:25:36,720 --> 00:25:38,080
+window especially with like all the
+
+809
+00:25:38,080 --> 00:25:40,640
+autocompaction they have now and other
+
+810
+00:25:40,640 --> 00:25:44,640
+methods for that. I mean, I think like
+
+811
+00:25:44,640 --> 00:25:47,679
+>> for if you have been using AI coding
+
+812
+00:25:47,679 --> 00:25:50,400
+agents for six to nine months and you
+
+813
+00:25:50,400 --> 00:25:52,400
+use them for 60 hours a week, like the
+
+814
+00:25:52,400 --> 00:25:54,480
+dumb zone is not a useful concept to
+
+815
+00:25:54,480 --> 00:25:56,880
+you. I will regularly go up to 60. I
+
+816
+00:25:56,880 --> 00:25:58,720
+will regularly like aggressively keep it
+
+817
+00:25:58,720 --> 00:26:00,640
+below 30. It depends on the complexity
+
+818
+00:26:00,640 --> 00:26:03,279
+of your task, the amount of instructions
+
+819
+00:26:03,279 --> 00:26:06,240
+versus information. So like your mileage
+
+820
+00:26:06,240 --> 00:26:08,320
+may vary. If you are using coding agents
+
+821
+00:26:08,320 --> 00:26:09,760
+for the first time, this is what I this
+
+822
+00:26:09,760 --> 00:26:11,520
+is what we teach people is like if you
+
+823
+00:26:11,520 --> 00:26:12,720
+don't know what to do and you haven't
+
+824
+00:26:12,720 --> 00:26:14,240
+developed that intuition, then like
+
+825
+00:26:14,240 --> 00:26:15,840
+shoot to keep it under 40 and if you get
+
+826
+00:26:15,840 --> 00:26:17,520
+up to 60, like think about wrapping it
+
+827
+00:26:17,520 --> 00:26:19,279
+up and like you can keep iterating on
+
+828
+00:26:19,279 --> 00:26:20,559
+the same doc. That's what's also nice
+
+829
+00:26:20,559 --> 00:26:21,919
+about these is like we don't use the
+
+830
+00:26:21,919 --> 00:26:23,520
+built-in compaction because everything
+
+831
+00:26:23,520 --> 00:26:26,159
+that matters is going into static assets
+
+832
+00:26:26,159 --> 00:26:27,440
+and so you can always resume from where
+
+833
+00:26:27,440 --> 00:26:28,640
+you left off without having to worry
+
+834
+00:26:28,640 --> 00:26:30,480
+about the quality of an autocompact or a
+
+835
+00:26:30,480 --> 00:26:32,799
+manual compact.
+
+836
+00:26:32,799 --> 00:26:35,120
+>> Brilliant, Dex.
+
+837
+00:26:35,120 --> 00:26:37,679
+Well done, dude. Thank you. Let's give
+
+838
+00:26:37,679 --> 00:26:42,360
+it up for him. Huh? Yes.
