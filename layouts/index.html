@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="hero">
+  <h1>{{ .Site.Title }}</h1>
+  <p>{{ .Site.Params.description }}</p>
+</section>
+<section>
+  <h2>文章</h2>
+  <ul class="post-list">
+    {{ range .Site.RegularPages.ByDate.Reverse }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <span class="meta">{{ .Date.Format "2006-01-02" }}</span>
+    </li>
+    {{ else }}
+    <li>目前還沒有文章。</li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

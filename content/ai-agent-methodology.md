@@ -1,3 +1,9 @@
+---
+title: "從 RPI 到情境工程：兩場 AI Coding Agent 演講的實戰方法論"
+date: 2026-04-01T22:49:00+08:00
+draft: false
+---
+
 # 從 RPI 到情境工程：兩場 AI Coding Agent 演講的實戰方法論
 
 ## 前言

@@ -1,0 +1,8 @@
+baseURL = 'https://example.org/'
+languageCode = 'zh-tw'
+title = 'Narumi Notes'
+defaultContentLanguage = 'zh-tw'
+enableRobotsTXT = true
+
+[params]
+  description = '筆記與字幕整理網站'
