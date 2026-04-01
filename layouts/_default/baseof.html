@@ -9,7 +9,10 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+      <div class="header-inner">
+        <a class="brand" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+        <p class="site-tagline">{{ .Site.Params.description }}</p>
+      </div>
     </header>
     <main class="container">
       {{ block "main" . }}{{ end }}
